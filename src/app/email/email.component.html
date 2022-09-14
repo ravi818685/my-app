@@ -1,0 +1,10 @@
+<p>email works!</p>
+<div *ngFor="let emaildetail of emaildetals" [ngClass]="{'visted':emaildetail.completed==true,
+'unvisted':emaildetail.completed==false}">
+
+<p>{{emaildetail.title}}</p>
+<p>{{emaildetail.completed}}</p>
+
+
+
+</div>

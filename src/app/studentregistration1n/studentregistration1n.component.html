@@ -1,0 +1,18 @@
+<p>studentregistration1n works!</p>
+<div class="container">
+    <input type="text" [(ngModel)]="name">
+    <br>
+    <ol>
+        <li *ngFor="let name of names; let i = index">{{name}}
+           <button (click)="deleteEach(i)">delete</button> 
+        </li>
+    </ol>
+    <br>
+    <button (click)="add()" class="btn btn-primary">register</button>
+    <br>
+    <button (click)="deletea()" class="btn btn-danger">delete</button>
+    <br>
+    <button (click)="deleteall()">deleteAll</button>
+    <br>
+    <button (click)="revers()" class="btn btn-warning">reverse</button>
+</div>

@@ -1,0 +1,10 @@
+img{
+    height: 30vh;
+    width: 30vw;
+}
+table{
+    text-align: center;
+}
+input:focus{
+color: aqua;
+}

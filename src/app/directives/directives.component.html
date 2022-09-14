@@ -1,0 +1,18 @@
+<p>directives works!</p>
+<label appHighelates>select cars </label>
+<input type="radio" id="bmw" name="car" value="bmw" [(ngModel)]="car">
+<label for="bmw">Bmw</label>
+<input type="radio" id="tata" name="car" value="tata" [(ngModel)]="car">
+<label for="tata">Tata</label>
+<input type="radio" id="audi" name="car" value="audi" [(ngModel)]="car">
+<label for="audi">Audi</label>
+<br>
+<p>{{car}}</p>
+<img *ngIf="car=='bmw'" src="/assets/bmw.jpg" alt="">
+<br>
+<img *ngIf="car=='tata'"       src="/assets/tata.jpg" alt="">
+<br>
+<img  *ngIf="car=='audi'"  src="/assets/audi.jpg" alt="" >
+<br>
+<marquee>{{message}}</marquee>
+

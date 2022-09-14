@@ -1,0 +1,24 @@
+.parent{
+    background-color: aqua;
+    height: 100%;
+    width: 100vw;
+    margin: 20px;
+    display: flex;
+}
+.child1{
+    margin: 50px;
+    border-radius: 10px;
+    
+}
+.child2{
+    margin: 15px;
+    height: 40vh;
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 50px;
+}
+img{
+    border-radius: 15px;
+}

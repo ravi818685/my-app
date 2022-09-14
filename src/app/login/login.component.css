@@ -1,0 +1,36 @@
+p{
+    color: red;
+}
+.parent{
+    height: 80%;
+    width: 100vw;
+    background-color:blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+input{
+    margin: 10px;
+}
+span{
+    color: green;
+}
+h1{
+    color: white;
+}
+label{
+    color: white;
+}
+button{
+    background-color: blue;
+    color: white;
+    margin: 10px;
+}
+form{
+    height: 100%;
+    width: 50%;
+    background-color: aqua;
+    text-align: center;
+}

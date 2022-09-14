@@ -1,0 +1,60 @@
+<p>accountdetails works!</p>
+<br>
+<input type="text" [(ngModel)]="userenter">
+<button class="btn btn-primary" (click)="filter()">filter</button>
+<br>
+<select>
+    <option>createaccount</option>
+    <option>accounName</option>
+    <option>available balance</option>
+    <option>currency</option>
+    <option>userimage/option>
+    <option>account_number</option>    
+    <option>id</option>
+</select>
+<br>
+<select>
+    <option>ase</option>
+    <option>dse</option>
+</select>
+<br>
+<button>soort</button>
+<br>
+<table border="2">
+    <thead >
+<tr>
+    <th>
+        createaccount
+    </th>
+    <th>accounName</th>
+    <th>avilabel balance</th>
+    <th>currency</th>
+    <th>userimage</th>
+    <th>account_number</th>
+    <th>id</th>
+    <th>delet http</th>
+</tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accountdetail of accountdetails">
+            <td>
+{{accountdetail.createdAt}}
+            </td>
+            <td>{{accountdetail.account_name}}</td>
+<td>{{accountdetail.available_balance}}</td>
+<td>{{accountdetail.currency}}</td>
+<td><img src='{{accountdetail.user_image}}'></td>
+<td>{{accountdetail.account_number}}</td>
+<td>{{accountdetail.id}}</td>
+<td><button (click)="delet(accountdetail.id)">delet</button></td>
+        </tr>
+
+    </tbody>
+</table>
+<br>
+<ul class="pagination">
+  <li class="page-item" ><a class="page-link" >1</a></li>
+  <li class="page-item" ><a class="page-link" >2</a></li>
+  <li class="page-item" ><a class="page-link" >3</a></li>
+  
+</ul>

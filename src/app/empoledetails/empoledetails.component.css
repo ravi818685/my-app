@@ -1,0 +1,26 @@
+.container{
+    height: 100%;
+    width: 50%;
+    background-color: aqua;
+    overflow: auto;
+    padding: 20px;
+
+}
+button{
+    margin: 10px;
+}
+input{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+}
+.button{
+    display: flex;
+    text-align: center;
+}
+.allinputs{
+    text-align: center;
+}
+.totalprice{
+    text-align: center;
+}

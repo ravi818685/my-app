@@ -1,0 +1,13 @@
+<p>productofitems works!</p>
+<br>
+<div *ngFor="let product of productofitems" class=" container col-lg-12">
+<p >{{product.id}}</p>
+<p >{{product.title}}</p>
+<p>{{product.description}}</p>
+<p>{{product.price}}</p>
+<p>{{product.category}}</p>
+<img src="{{product.image}}">
+<p>{{product.rating.rate}}</p>
+<p>{{product.rating.count}}</p>
+</div>
+

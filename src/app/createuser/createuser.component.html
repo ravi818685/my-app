@@ -1,0 +1,161 @@
+<p>createuser works!</p>
+<form [formGroup]="createuser">
+  <label>Name</label>
+  <input type="text" formControlName="name" />
+  <div
+    class="r"
+    *ngIf="createuser.get('name')?.touched && createuser.get('name')?.invalid"
+  >
+    <p *ngIf="createuser.get('name')?.errors?.['required']">Name Is Required</p>
+    <p *ngIf="createuser.get('name')?.errors?.['minlength']">
+      Minimum 5 letters are Is Required
+    </p>
+    <p *ngIf="createuser.get('name')?.errors?.['maxlength']">
+      Maximum 10 letters are Is Required
+    </p>
+  </div>
+
+  <br />
+  <label>Age</label>
+  <input type="number" formControlName="age" />
+  <div
+    class="r"
+    *ngIf="createuser.get('age')?.touched && createuser.get('age')?.invalid"
+  >
+    <p *ngIf="createuser.get('age')?.errors?.['required']">
+      Plse Enter Your Age
+    </p>
+    <p *ngIf="createuser.get('age')?.errors?.['min']">
+      Minimum Age 5 Is Required
+    </p>
+    <p *ngIf="createuser.get('age')?.errors?.['max']">
+      Maximum Age 55 Is Required
+    </p>
+  </div>
+
+  <br />
+  <label>phone Number</label>
+  <input type="number" formControlName="phone" />
+  <div
+    class="r"
+    *ngIf="createuser.get('phone')?.touched && createuser.get('phone')?.invalid"
+  >
+    <p *ngIf="createuser.get('phone')?.errors?.['required']">
+      Plse Enter Your Phpne Number
+    </p>
+    <p *ngIf="createuser.get('phone')?.errors?.['min']">
+      Minimum phone Numbers 10 Is Required
+    </p>
+    <p *ngIf="createuser.get('phone')?.errors?.['max']">
+      Maximum Phone numbers 10 Is Required
+    </p>
+  </div>
+
+  <br />
+  <label>Password</label>
+  <input type="text" formControlName="password" />
+  <div
+    class="r"
+    *ngIf="
+      createuser.get('password')?.touched && createuser.get('password')?.invalid
+    "
+  >
+    <p *ngIf="createuser.get('password')?.errors?.['required']">
+      Plse Enter Your Password
+    </p>
+    <p *ngIf="createuser.get('password')?.errors?.['pattern']">
+      Plse Enter one number,one small letter and one upper letter and Minimum 12
+      letters,
+    </p>
+    <p *ngIf="createuser.get('password')?.errors?.['max']">
+      Maximum Phone numbers 10 Is Required
+    </p>
+  </div>
+  <br />
+
+  <div formGroupName="address">
+    <label>state</label>
+    <input type="text" formControlName="state" />
+
+    <br />
+    <label>Pin</label>
+    <input type="number" formControlName="pin" />
+    <div
+      class="r"
+      *ngIf="
+        createuser.get('address')?.get('pin')?.touched &&
+        createuser.get('address')?.invalid
+      "
+    >
+      <p *ngIf="createuser.get('address')?.get('pin')?.errors?.['required']">
+        Plse Enter Your Age
+      </p>
+      <p *ngIf="createuser.get('address')?.get('pin')?.errors?.['min']">
+        Minimum Age 5 Is Required
+      </p>
+      <p *ngIf="createuser.get('address')?.get('pin')?.errors?.['max']">
+        Maximum Age 55 Is Required
+      </p>
+    </div>
+    <br />
+  </div>
+  <button (click)="add()">Add Cards</button>
+  <br />
+  <div formGroupName="cards">
+    <div *ngFor="let card of cardsFormArry.controls; let i = index">
+      <div formGroupName="{{ i }}">
+        <label>Number</label>
+        <input type="number" formControlName="number" />
+
+        <br />
+        <label>Expirey Date</label>
+        <input type="date" formControlName="Expirey" />
+        <br />
+        <label>CVV</label>
+        <input type="number" formControlName="cvv" />
+        <div
+          class="r"
+          *ngIf="
+            cardsFormArry.controls[i]?.get('cvv')?.touched &&
+            cardsFormArry.controls[i]?.get('cvv')?.invalid
+          "
+        >
+          <p
+            *ngIf="cardsFormArry.controls[i]?.get('cvv')?.errors?.['required']"
+          >
+            Plse Enter Your Pin Code
+          </p>
+          <p *ngIf="cardsFormArry.controls[i]?.get('cvv')?.errors?.['min']">
+            Minimum Pin code 6 Is Required
+          </p>
+          <p *ngIf="cardsFormArry.controls[i]?.get('cvv')?.errors?.['max']">
+            Maximum Pin Code 6 Is Required
+          </p>
+        </div>
+        <br />
+      </div>
+      <br />
+
+      <button (click)="remove(i)">Remove</button>
+    </div>
+  </div>
+
+  <label>Payment Type:</label>
+  <label>Upi Payment</label>
+  <input type="radio" formControlName="payment"  name=p value="upi" />
+  <label>card payment</label>
+  <input type="radio" formControlName="Payment" name="p" value="card" />
+  <br />
+  <div *ngIf="createuser.get('payment')?.value == 'upi'">
+    <label>Upi id</label>
+    <input type="text" formControlName="upi" />
+  </div>
+  <br />
+  <div *ngIf="createuser.get('payment')?.value == 'card'">
+    <label>card payment</label>
+    <input type="text" formControlName="card" />
+  </div>
+
+  <br />
+  <button (click)="submit()" class="btn btn-primary">Submit</button>
+</form>

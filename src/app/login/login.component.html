@@ -1,0 +1,13 @@
+
+<form [formGroup]="loginForm">
+<label>Email</label>
+<input type="text" placeholder="enter u r email id" formControlName="email">
+<br>
+<label>password</label>
+<input type="password" placeholder="enter u r paswoord" formControlName="password">
+<br>
+<button (click)="submit()">sign in</button>
+<br>
+<button routerLink="/dashboard">login</button>
+<br>
+</form>

@@ -1,0 +1,54 @@
+<p>databinding works!</p>
+<p>my age is {{ age }}</p>
+<p>my namee is {{ name }}</p>
+<p>i am from indis:{{isindia}}</p>
+
+<p  *ngFor="let phone of phones">{{ phone }}</p>
+
+<ol> 
+    <li *ngFor="let course of courses">{{course}} </li> 
+</ol>
+<p *ngFor="let user of user ">My Name is {{user.name}} and city is {{user.city}}
+
+</p>
+
+
+
+
+<p> My name is {{employedetails.name}} and i am working in {{employedetails.company}} my package is {{employedetails.package}}</p>
+
+<table border="2">
+
+<thead>
+<tr>
+<th>name</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor=" let user of user">
+<td>{{user.name}}</td>
+<td>{{user.city}}</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<table border="2">
+<thead>
+<tr >
+<th>name</th>
+<th>city</th>
+<th>marks</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let student of student">
+<td>{{student.name}}</td>
+<td>{{student.city}}</td>
+<td>{{student.marks}}</td>
+</tr>
+
+</tbody>
+</table>
