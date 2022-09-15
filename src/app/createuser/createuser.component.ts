@@ -19,8 +19,8 @@ export class CreateuserComponent implements OnInit {
     
     cards: new FormArray([]),
     payment:new FormControl(),
-    card:new FormControl(),
-    upi:new FormControl()
+    car:new FormControl(),
+    upi:new FormControl(),
   });
 
   get cardsFormArry() {

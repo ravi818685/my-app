@@ -117,9 +117,7 @@
           class="r"
           *ngIf="
             cardsFormArry.controls[i]?.get('cvv')?.touched &&
-            cardsFormArry.controls[i]?.get('cvv')?.invalid
-          "
-        >
+            cardsFormArry.controls[i]?.get('cvv')?.invalid">
           <p
             *ngIf="cardsFormArry.controls[i]?.get('cvv')?.errors?.['required']"
           >
@@ -144,18 +142,19 @@
   <label>Upi Payment</label>
   <input type="radio" formControlName="payment"  name=p value="upi" />
   <label>card payment</label>
-  <input type="radio" formControlName="Payment" name="p" value="card" />
-  <br />
-  <div *ngIf="createuser.get('payment')?.value == 'upi'">
+  <input type="radio" formControlName="Payment" name="p" value="car" />
+  <br/>
+
+
+  <div *ngIf="createuser.get('payment')?.value =='upi'">
     <label>Upi id</label>
     <input type="text" formControlName="upi" />
   </div>
-  <br />
-  <div *ngIf="createuser.get('payment')?.value == 'card'">
+  <div *ngIf="createuser.get('payment')?.value == 'car'">
     <label>card payment</label>
-    <input type="text" formControlName="card" />
+    <input type="text" formControlName="car" />
   </div>
 
-  <br />
+  <br/>
   <button (click)="submit()" class="btn btn-primary">Submit</button>
 </form>
