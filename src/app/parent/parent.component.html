@@ -1,0 +1,8 @@
+<p>parent works!</p>
+<p>{{b}}</p>
+<input type="text" [(ngModel)]="pa">
+<app-child [ch]='pa' (bEvent)="catch($event)" ></app-child>
+
+<p [(ngModel)]="na"></p>
+
+<app-star [rating]="3.3"></app-star>

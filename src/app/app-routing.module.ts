@@ -5,6 +5,7 @@ import { AddtocartComponent } from './addtocart/addtocart.component';
 import { AuthGuard } from './auth.guard';
 import { CalculaterComponent } from './calculater/calculater.component';
 import { CartComponent } from './cart/cart.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 import { ChartsComponent } from './charts/charts.component';
 import { CreateuserComponent } from './createuser/createuser.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,9 +19,12 @@ import { FormvechicleComponent } from './formvechicle/formvechicle.component';
 import { GooglepayComponent } from './googlepay/googlepay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
 import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ProductComponent } from './product/product.component';
 import { ProductofitemsComponent } from './productofitems/productofitems.component';
 import { RaviworkComponent } from './raviwork/raviwork.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
@@ -30,6 +34,7 @@ import { StudentregistrationComponent } from './studentregistration/studentregis
 import { Studentregistration1nComponent } from './studentregistration1n/studentregistration1n.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { VechileComponent } from './vechile/vechile.component';
+import { VechiledetailsComponent } from './vechiledetails/vechiledetails.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -63,8 +68,13 @@ const routes: Routes = [
       { path: 'productofitems', component: ProductofitemsComponent },
       { path: 'socialmedia', component: SocialmediaComponent },
       { path: 'email', component: EmailComponent },
+      {path:'vechiledetails/:id',component:VechiledetailsComponent}
     ],
   },
+  {path:'nav',component:NavComponent},
+  {path:'product',component:ProductComponent},
+  {path:"cartlist",component:CartlistComponent},
+  {path:'parent',component:ParentComponent},
   { path: 'datacard', component: DatacardComponent },
   { path: 'raviwork', component: RaviworkComponent },
   { path: 'formvechicle', component: FormvechicleComponent, canDeactivate:[NotifyGuard]},

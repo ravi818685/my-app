@@ -140,7 +140,7 @@
 
   <label>Payment Type:</label>
   <label>Upi Payment</label>
-  <input type="radio" formControlName="payment"  name=p value="upi" />
+  <input type="radio" formControlName="payment"  name="p" value="upi" />
   <label>card payment</label>
   <input type="radio" formControlName="Payment" name="p" value="car" />
   <br/>
@@ -148,12 +148,14 @@
 
   <div *ngIf="createuser.get('payment')?.value =='upi'">
     <label>Upi id</label>
-    <input type="text" formControlName="upi" />
+    <input type="text"  formControlName="upi"/>
   </div>
-  <div *ngIf="createuser.get('payment')?.value == 'car'">
-    <label>card payment</label>
-    <input type="text" formControlName="car" />
+  <div *ngIf="createuser.get('payment')?.value=='car'">
+    <label>card</label>
+    <input type="text" formControlName="car">
   </div>
+
+
 
   <br/>
   <button (click)="submit()" class="btn btn-primary">Submit</button>

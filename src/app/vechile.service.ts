@@ -16,6 +16,13 @@ export class VechileService {
     );
   }
 
+  getVechile(id:string): Observable<Vechile> {
+    return this._httpClient.get<Vechile>(
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +'/'+id
+       
+    );
+  }
+
   delet(id: string): Observable<Vechile> {
     return this._httpClient.delete<Vechile>(
       'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +
@@ -40,16 +47,20 @@ export class VechileService {
     );
   }
 
-createvehile(Vehile:Vechile):Observable<Vechile>{
-    return this._httpClient.post<Vechile>('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',Vehile)
-}
+  createvehile(Vehile: Vechile): Observable<Vechile> {
+    return this._httpClient.post<Vechile>(
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',
+      Vehile
+    );
+  }
 
-
-
-  getsort(colum:string,order:string): Observable<Vechile[]> {
+  getsort(colum: string, order: string): Observable<Vechile[]> {
     return this._httpClient.get<Vechile[]>(
-      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction'
-        +'?sortBy='+ colum+'&order='+order
+      'https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction' +
+        '?sortBy=' +
+        colum +
+        '&order=' +
+        order
     );
   }
 }

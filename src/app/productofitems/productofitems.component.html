@@ -1,13 +1,22 @@
 <p>productofitems works!</p>
-<br>
-<div *ngFor="let product of productofitems" class=" container col-lg-12">
-<p >{{product.id}}</p>
-<p >{{product.title}}</p>
-<p>{{product.description}}</p>
-<p>{{product.price}}</p>
-<p>{{product.category}}</p>
-<img src="{{product.image}}">
-<p>{{product.rating.rate}}</p>
-<p>{{product.rating.count}}</p>
+<br />
+<div>
+  <div class="container ">
+    <div class="row " id="box">
+      <div
+        *ngFor="let product of productofitems"
+        class="col-lg-6 col-md-4 col-sm-4 col-12 "
+      >
+        <p>{{ product.id }}</p>
+        <p>{{ product.title }}</p>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }}</p>
+        <p>{{ product.category }}</p>
+        <img src="{{ product.image }}" />
+        <p>{{ product.rating.rate }}</p>
+        <p>{{ product.rating.count }}</p>
+        <app-star [rating]="product.rating.rate"></app-star>
+      </div>
+    </div>
+  </div>
 </div>
-

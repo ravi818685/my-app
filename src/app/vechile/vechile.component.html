@@ -59,7 +59,10 @@ manufacturer
 
 <td>{{vechile.id}}
     </td>
-<td><button (click)="delet(vechile.id)">delete</button></td>
+<td>
+    
+    <button class="btn btn-danger" (click)="delet(vechile.id)">delete</button></td>
+  <button class="btn btn-success" (click)="view(vechile.id)">view</button>
 </tr>
     </tbody>
 </table>

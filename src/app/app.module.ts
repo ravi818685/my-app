@@ -37,7 +37,14 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { EmailComponent } from './email/email.component';
 import { DatacardComponent } from './datacard/datacard.component';
 import { FormvechicleComponent } from './formvechicle/formvechicle.component';
-import { CreateuserComponent } from './createuser/createuser.component'
+import { CreateuserComponent } from './createuser/createuser.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { StarComponent } from './star/star.component';
+import { ProductComponent } from './product/product.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
+import { NavComponent } from './nav/nav.component';
+import { VechiledetailsComponent } from './vechiledetails/vechiledetails.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +80,14 @@ import { CreateuserComponent } from './createuser/createuser.component'
     EmailComponent,
     DatacardComponent,
     FormvechicleComponent,
-    CreateuserComponent
+    CreateuserComponent,
+    ParentComponent,
+    ChildComponent,
+    StarComponent,
+    ProductComponent,
+    CartlistComponent,
+    NavComponent,
+    VechiledetailsComponent
   ],
   imports: [
     BrowserModule,
